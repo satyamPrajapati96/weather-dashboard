@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10182f">
+  <title>Atmos | Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="dashboard">
+    <header class="topbar">
+      <a class="brand" href="#">atmos<span>.</span></a>
+      <span class="live-label"><i></i> LIVE WEATHER</span>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">YOUR PERSONAL WEATHER STATION</p>
+      <h1>Forecast your <span>day.</span></h1>
+      <p class="subtitle">Real-time weather, wherever you are.</p>
+
+      <form id="search-form" class="search">
+        <input id="city-input" type="text"
+          placeholder="Search a city, e.g. Delhi"
+          aria-label="Search city" maxlength="100" required>
+        <button id="search-btn" type="submit">Search ↗</button>
+      </form>
+      <p id="message" class="message" role="status" aria-live="polite">
+        Enter a city to see its current weather.
+      </p>
+    </section>
+
+    <section id="weather" class="weather hidden">
+      <div class="weather-main">
+        <div class="location">
+          <div>
+            <h2 id="city-name">--</h2>
+            <p id="local-time">Local time</p>
+          </div>
+          <span id="weather-icon" class="weather-icon">☀</span>
+        </div>
+
+        <div class="current">
+          <div class="temperature"><span id="temperature">--</span><sup>°C</sup></div>
+          <p id="condition">--</p>
+          <p class="feels">Feels like <span id="feels-like">--</span>°C</p>
+        </div>
+
+        <div class="highlights">
+          <div><span>MIN TEMP</span><strong id="min-temp">--°</strong></div>
+          <div><span>MAX TEMP</span><strong id="max-temp">--°</strong></div>
+          <div><span>UV INDEX</span><strong id="uv-index">--</strong></div>
+        </div>
+      </div>
+
+      <h3>Today's highlights</h3>
+      <div class="metrics">
+        <article class="metric">
+          <span class="metric-icon">💧</span>
+          <p>Humidity</p>
+          <strong><span id="humidity">--</span><small>%</small></strong>
+        </article>
+        <article class="metric">
+          <span class="metric-icon">〰</span>
+          <p>Wind speed</p>
+          <strong><span id="wind">--</span><small> km/h</small></strong>
+        </article>
+        <article class="metric">
+          <span class="metric-icon">🌡</span>
+          <p>Pressure</p>
+          <strong><span id="pressure">--</span><small> hPa</small></strong>
+        </article>
+        <article class="metric">
+          <span class="metric-icon">☁</span>
+          <p>Cloud cover</p>
+          <strong><span id="cloud-cover">--</span><small>%</small></strong>
+        </article>
+      </div>
+
+      <h3>Next 5 days</h3>
+      <div id="forecast" class="forecast"></div>
+      <p id="updated" class="updated"></p>
+    </section>
+
+    <footer>
+      <span>ATMOS WEATHER DASHBOARD</span>
+      <span>Data by Open-Meteo</span>
+    </footer>
+  </main>
+</body>
+</html>

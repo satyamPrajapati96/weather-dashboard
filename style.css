@@ -1,0 +1,326 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #f4f6ff;
+  background: #0b1020;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px;
+  background:
+    radial-gradient(ellipse at 85% 5%, #27386b65, transparent 40%),
+    #0b1020;
+}
+
+button, input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.dashboard {
+  max-width: 950px;
+  margin: auto;
+}
+
+.topbar, .location, .highlights, footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.topbar {
+  padding: 10px 0 45px;
+}
+
+.brand {
+  color: white;
+  text-decoration: none;
+  font: 700 26px 'Space Grotesk', sans-serif;
+}
+
+.brand span, h1 span {
+  color: #9ba8ff;
+}
+
+.live-label, .eyebrow {
+  color: #9ba8ff;
+  font-size: 10px;
+  letter-spacing: 1.8px;
+}
+
+.live-label i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: #55e4b0;
+}
+
+.hero {
+  text-align: center;
+}
+
+h1 {
+  margin: 14px 0 8px;
+  font: 600 clamp(36px, 7vw, 60px) 'Space Grotesk', sans-serif;
+  letter-spacing: -2px;
+}
+
+.subtitle, .message {
+  color: #a2adc8;
+  font-size: 13px;
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  max-width: 560px;
+  margin: 28px auto 0;
+  padding: 7px;
+  border: 1px solid #313b5a;
+  border-radius: 13px;
+  background: #151c31;
+}
+
+.search input {
+  flex: 1;
+  width: 0;
+  min-width: 0;
+  padding: 12px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: white;
+}
+
+.search button {
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 9px;
+  background: #9ba8ff;
+  color: #10152a;
+  font-weight: 700;
+}
+
+.search button:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+.message {
+  min-height: 18px;
+  margin: 14px 0 0;
+}
+
+.message.error {
+  color: #ff929c;
+}
+
+.weather {
+  margin-top: 36px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.weather-main {
+  padding: 28px;
+  border: 1px solid #303b5b;
+  border-radius: 20px;
+  background: linear-gradient(130deg, #1b2543, #151b30);
+}
+
+.location h2 {
+  margin: 0;
+  font: 600 23px 'Space Grotesk', sans-serif;
+}
+
+.location p, .feels {
+  color: #9ba7c4;
+  font-size: 12px;
+}
+
+.weather-icon {
+  font-size: 55px;
+}
+
+.current {
+  padding: 20px 0;
+}
+
+.temperature {
+  font: 500 clamp(55px, 9vw, 80px) 'Space Grotesk', sans-serif;
+  letter-spacing: -3px;
+}
+
+.temperature sup {
+  color: #aab5ff;
+  font-size: 24px;
+  vertical-align: top;
+}
+
+#condition {
+  margin: 5px 0;
+}
+
+.highlights {
+  justify-content: flex-start;
+  padding-top: 20px;
+  border-top: 1px solid #333d5b;
+}
+
+.highlights div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.highlights span {
+  color: #9ca7c7;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.highlights strong {
+  font: 600 18px 'Space Grotesk', sans-serif;
+}
+
+h3 {
+  margin: 30px 0 15px;
+  font: 600 18px 'Space Grotesk', sans-serif;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 13px;
+}
+
+.metric {
+  min-width: 0;
+  padding: 19px 15px;
+  border: 1px solid #28324f;
+  border-radius: 14px;
+  background: #141b2e;
+}
+
+.metric-icon {
+  font-size: 22px;
+}
+
+.metric p {
+  color: #a3adc7;
+  font-size: 12px;
+}
+
+.metric strong {
+  font: 600 23px 'Space Grotesk', sans-serif;
+  overflow-wrap: anywhere;
+}
+
+.metric small {
+  color: #9ba7c4;
+  font: 400 11px 'DM Sans', sans-serif;
+}
+
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.forecast-day {
+  padding: 17px 8px;
+  border: 1px solid #28324f;
+  border-radius: 13px;
+  background: #141b2e;
+  text-align: center;
+}
+
+.forecast-day .day {
+  color: #a2adc9;
+  font-size: 11px;
+}
+
+.forecast-day .icon {
+  display: block;
+  margin: 12px 0;
+  font-size: 27px;
+}
+
+.forecast-day strong {
+  font: 600 15px 'Space Grotesk', sans-serif;
+}
+
+.forecast-day small {
+  display: block;
+  margin-top: 8px;
+  color: #8490ae;
+  font-size: 10px;
+}
+
+.updated {
+  color: #8490ae;
+  font-size: 11px;
+  text-align: right;
+}
+
+footer {
+  margin-top: 50px;
+  padding: 20px 0;
+  border-top: 1px solid #28324f;
+  color: #8490ae;
+  font-size: 10px;
+}
+
+@media (max-width: 650px) {
+  body {
+    padding: 16px;
+  }
+
+  .metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .forecast {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .weather-main {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 390px) {
+  .search {
+    gap: 5px;
+  }
+
+  .search button {
+    padding: 10px;
+  }
+
+  .forecast {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
